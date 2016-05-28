@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>email register</title>
+  </head>
+  <body>
+    <h1>Please register your email here</h>
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p>{{message}}</p>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+    <form action='/register' method='post'>
+      EMAIL:<input name='email' type='text' placeholder='YourEmailHere'><br>
+      <input type='submit' value='SUBMIT'>
+    </form>
+  </body>
+</html>

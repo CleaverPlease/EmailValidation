@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>registeration success</title>
+  </head>
+  <body>
+    <h1>You've successfully registered your email!</h1>
+    {{session['email']}}
+    {% for email in emails %}
+      <p>{{ email['email']}} created at {{email[created_at]}}</p>
+    {% endfor %}
+  </body>
+</html>
